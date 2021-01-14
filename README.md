@@ -12,8 +12,6 @@ Sub WallStreet()
     Dim close_price As Double
     Dim Summary_Table_Row As Integer
     Dim ws As Worksheet
-    'Dim bonus_table_row As Integer
-    
     
    
 'loop through worksheets
@@ -23,11 +21,6 @@ For Each ws In Worksheets
     ws.Cells(1, 10).Value = "Yearly Change"
     ws.Cells(1, 11).Value = "Percent Change"
     ws.Cells(1, 12).Value = "Total Stock Volume"
-    'ws.Cells(2, 15).Value = "Greatest % Increase"
-    'ws.Cells(3, 15).Value = "Greatest % Decrease"
-    'ws.Cells(4, 15).Value = "Greatest Stock Volume"
-    'ws.Cells(1, 16).Value = "Ticker"
-    'ws.Cells(1, 17).Value = "Value"
     
     Summary_Table_Row = 2
     total_stock_volume = 0
@@ -112,7 +105,7 @@ For Each ws In Worksheets
             End If
             
             
-            'conditional formatting for percent change - not in example
+            'conditional formatting for percent change - not shown in example so excluded
             'If ws.Cells(i, 11).Value > 0 Then
                 'ws.Cells(i, 11).Interior.ColorIndex = 4
                 
@@ -123,12 +116,15 @@ For Each ws In Worksheets
                 'ws.Cells(i, 11).Interior.ColorIndex = 2
                                                     
              'End If
-             
-          Next i
-          
-       Next ws
-       
-       End Sub
+      
+    Next i
+    
+Next ws
+
+End Sub
+
+
+
 
 
 
